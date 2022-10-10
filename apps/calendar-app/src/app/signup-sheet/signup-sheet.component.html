@@ -1,0 +1,40 @@
+<div class="calendar-main-container">
+  <div class="row">
+    <div class="col">
+      <label *ngIf="!showCalendar" class="mr-3">Select Duration</label>
+      <div *ngIf="!showCalendar" ngbDropdown class="d-inline-block">
+        <select
+          [(ngModel)]="durationValue"
+          name="durationField"
+          class="form-select"
+        >
+          <option class="dropdown-item" disabled selected value="undefined">
+            Select Duration
+          </option>
+          <option
+            *ngFor="let duration of durationOptions; let x = index"
+            [ngValue]="duration.value"
+            id="index"
+            name="duration.name"
+            class="dropdown-item"
+          >
+            {{ duration.value }}
+          </option>
+        </select>
+      </div>
+      <button *ngIf="!showCalendar" class="ml-3 btn btn-primary view-btn" ngbTooltip="View SignUp Sheet" (click)="getSelectedDuration()">
+        View
+      </button>
+      <button *ngIf="showCalendar" class="btn btn-primary back-btn" ngbTooltip="Clear the SignUp Sheet" (click)="hideCalendar()">
+        Back
+      </button>
+    </div>
+    <div class="time-picker-div" *ngIf="showCalendar">
+      <lib-TimeRangePickerLib
+        [isExpandable]="isExpandable"
+        [duration]="durationValue"
+        [hourSegments]="durationValue === 60 ? 1 : durationValue === 30 ? 2 : 4"
+      ></lib-TimeRangePickerLib>
+    </div>
+  </div>
+</div>

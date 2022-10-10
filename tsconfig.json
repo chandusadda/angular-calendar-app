@@ -1,0 +1,34 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "target": "es2020",
+    "importHelpers": true,
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "paths": {
+      "@time-range-picker":["libs/time-range-picker-lib/src/public-api.ts"],
+      "TimeRangePickerLib": [
+        "dist/time-range-picker-lib"
+      ],
+      "angular-calendar": ["./libs/angular-calendar/src"],
+      "angular-calendar/date-adapters/date-fns": [
+        "./libs/angular-calendar/src/date-adapters/date-fns"
+      ],
+      "angular-calendar/date-adapters/moment": [
+        "./libs/angular-calendar/src/date-adapters/moment"
+      ]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true,
+    "strictInjectionParameters": true
+  }
+}

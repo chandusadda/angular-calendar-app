@@ -1,0 +1,38 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "./../../angular-calendar/src/angular-calendar.scss";
+
+@import "./lib/time-range-picker-lib.component.scss";
+
+.pl-0 {
+    padding-left: 0px;
+  }
+  
+  .pr-0 {
+    padding-right: 0px;
+  }
+  
+  .ml-minus-3-5 {
+    margin-left: -3.5rem;
+  }
+  
+  .ml-minus-2-5 {
+    margin-left: -2.5rem;
+  }
+  
+  .pl-4 {
+    padding-left: 1.5rem;
+  }
+  
+  .btn-group,
+  .btn-group-vertical {
+    display: -webkit-box;
+  }
+  
+  .text-initial {
+    text-align: initial;
+  }
+  
+  .pt-0-75 {
+    padding-top: 0.75rem;
+  }
